@@ -25,6 +25,10 @@ body {
   display: flex;
 }
 
+.box-shadow {
+  box-shadow: 0px 2px 12px #00000014;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
