@@ -20,6 +20,7 @@ const config: Config = {
         background: "#EDF3FF",
         accentLight: "#EDFFF5",
         accentBorder: "#DDFFEC",
+        tabBorder: "#23CEFD",
       },
       fontSize: {
         15: "15px",
