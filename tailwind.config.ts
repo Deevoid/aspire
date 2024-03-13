@@ -24,6 +24,9 @@ const config: Config = {
       fontSize: {
         15: "15px",
       },
+      textColor: {
+        textBaseColor: "#222222",
+      },
     },
   },
   plugins: [],

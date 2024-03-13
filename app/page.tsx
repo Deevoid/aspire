@@ -1,10 +1,6 @@
-import { Sidebar } from "@/components/Sidebar";
+import { Sidebar } from "@/components/organisms/Sidebar";
+import { CardsPage } from "@/templates/CardsPage";
 
 export default function Home() {
-  return (
-    <>
-      <Sidebar />
-      <main className="flex flex-1">Hello</main>;
-    </>
-  );
+  return <CardsPage />;
 }

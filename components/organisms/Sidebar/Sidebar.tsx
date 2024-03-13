@@ -13,7 +13,7 @@ export const Sidebar = () => {
           Trusted way of banking for 3,000+ SMEs and startups in Singapore
         </p>
       </div>
-      <div className="flex flex-col gap-[60px]">
+      <nav className="flex flex-col gap-[60px]">
         {navigation.map((navItem) => {
           return (
             <a
@@ -39,7 +39,7 @@ export const Sidebar = () => {
             </a>
           );
         })}
-      </div>
+      </nav>
     </aside>
   );
 };
