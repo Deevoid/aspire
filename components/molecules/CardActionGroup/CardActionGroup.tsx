@@ -4,12 +4,12 @@ import React from "react";
 
 export const CardActionGroup = () => {
   return (
-    <div className="rounded-2xl p-5 bg-background flex items-center justify-between">
+    <div className="rounded-2xl p-5 bg-background flex flex-wrap items-center gap-y-8 justify-between">
       {cardActions.map((action) => {
         return (
           <button
             key={action.id}
-            className="flex items-center flex-col gap-[7px]"
+            className="flex flex-shrink-0 items-center flex-col gap-[7px]"
           >
             <Image
               src={action.icon}

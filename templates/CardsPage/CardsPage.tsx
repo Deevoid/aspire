@@ -5,7 +5,7 @@ import { CardsDashboard } from "@/components/organisms/CardsDashboard";
 export const CardsPage = () => {
   return (
     <>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <CardsDashboard />
     </>
   );
