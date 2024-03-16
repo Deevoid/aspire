@@ -5,7 +5,9 @@ import React, { useMemo } from "react";
 export const CardNumber = (props: CardNumberProps) => {
   const { cardNumber, className, visibility = "partial" } = props;
 
-  const choppedCardNumbers = getChoppedNumbersArray(cardNumber.split(""));
+  const choppedCardNumbers = getChoppedNumbersArray(
+    cardNumber.replaceAll(" ", "").split("")
+  );
 
   const { hiddenNumbersArray, visibleNumbersArray } = useMemo(() => {
     if (visibility === "visible") {
@@ -43,17 +45,31 @@ export const CardNumber = (props: CardNumberProps) => {
         <span className="flex gap-[27px]  flex-shrink-0">
           {renderableArray.map((item, index) => {
             return (
-              <span key={index} className="flex w-[56px] gap-[6.7px]">
-                {item.map((cardItem) => {
+              <span
+                key={index.toString() + item + "card-outer"}
+                className="flex w-[56px] gap-[6.7px]"
+              >
+                {item.map((cardItem, cardInnerIndex) => {
                   if (renderValues)
                     return (
-                      <span key={cardItem} className="text-white">
+                      <span
+                        key={
+                          cardInnerIndex.toString() +
+                          cardItem +
+                          "card-inner-visible"
+                        }
+                        className="text-white"
+                      >
                         {cardItem}
                       </span>
                     );
                   return (
                     <span
-                      key={cardItem}
+                      key={
+                        cardInnerIndex.toString() +
+                        cardItem +
+                        "card-inner-hidden"
+                      }
                       className="text-white inline-block h-[9px] w-[9px] bg-white rounded-full"
                     />
                   );

@@ -7,14 +7,16 @@ import { SingleCardType } from "@/constants/cards";
 import Image from "next/image";
 import React from "react";
 
-export const Card = (props: Omit<SingleCardType, "transactions">) => {
-  const { id, name, cardNumber, expiryDate, cvv, cardType, cardState } = props;
+export const Card = (props: SingleCardType) => {
+  const { name, cardNumber, expiryDate, cvv, cardState } = props;
+
+  const isFrozenCard = cardState === "frozen";
 
   const [isCardNumberVisible, setIsCardNumberVisible] = React.useState(false);
 
   return (
     <div className="relative max-w-[414px]">
-      <div
+      <button
         className="absolute right-0 -top-7 cursor-pointer select-none flex gap-[6px]"
         onClick={() => {
           setIsCardNumberVisible((prev) => !prev);
@@ -29,7 +31,7 @@ export const Card = (props: Omit<SingleCardType, "transactions">) => {
         <span className="text-xs text-accent font-semibold">
           {isCardNumberVisible ? "Hide" : "Show"} card number
         </span>
-      </div>
+      </button>
       <div className="relative single-card p-[27px] rounded-lg bg-accent">
         <div className="flex justify-end">
           <Image
@@ -40,14 +42,14 @@ export const Card = (props: Omit<SingleCardType, "transactions">) => {
           />
         </div>
         <Spacer size={27} />
-        <p className="text-white font-semibold text-2xl">Mark Henry</p>
+        <p className="text-white font-semibold text-2xl">{name}</p>
         <Spacer size={27} />
         <CardNumber
-          cardNumber="1234567812345678"
+          cardNumber={cardNumber}
           visibility={isCardNumberVisible ? "visible" : "partial"}
         />
         <Spacer size={13.6} />
-        <CardDetails expiryDate="12/20" cvv="123" />
+        <CardDetails expiryDate={expiryDate} cvv={cvv} />
         <Spacer size={4.6} />
         <div className="flex justify-end">
           <Image
@@ -58,6 +60,9 @@ export const Card = (props: Omit<SingleCardType, "transactions">) => {
           />
         </div>
       </div>
+      {isFrozenCard && (
+        <div className="absolute top-0 left-0 h-full w-full rounded-lg opacity-80 bg-slate-50"></div>
+      )}
     </div>
   );
 };

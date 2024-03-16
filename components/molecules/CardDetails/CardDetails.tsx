@@ -2,10 +2,12 @@ import { CardDetailsProps } from "@/components/molecules/CardDetails/types";
 import React from "react";
 
 export const CardDetails = (props: CardDetailsProps) => {
-  const { expiryDate, cvv = "" } = props;
+  const { expiryDate, cvv = "", className } = props;
 
   return (
-    <div className="flex items-center gap-9 text-white font-semibold">
+    <div
+      className={`flex items-center gap-9 font-semibold text-white ${className}`}
+    >
       {expiryDate && (
         <p className="text-[13px]">
           <span>Thru: </span>

@@ -11,8 +11,8 @@ export const Accordion = (props: AccordionProps) => {
 
   return (
     <div className="relative isolate">
-      <div
-        className="relative flex items-center justify-between p-6 z-30 rounded-lg border border-[#f5f5f5] bg-[#f5f9ff] box-shadow-0"
+      <button
+        className="relative w-full flex items-center justify-between p-6 z-30 rounded-lg border border-[#f5f5f5] bg-[#f5f9ff] box-shadow-0"
         onClick={() => {
           setIsOpen((prev) => !prev);
         }}
@@ -27,7 +27,7 @@ export const Accordion = (props: AccordionProps) => {
             isOpen ? "rotate-180" : ""
           }`}
         />
-      </div>
+      </button>
 
       {isOpen && (
         <>
