@@ -18,6 +18,8 @@ Mix of RSC(Server components) and Client components
 Desktop mockup has been completed.
 Desktop mockup has been made responsive (Mobile mockup has been skipped)
 
+- On desktop, the carousel can be interacted with using the bottom dot button. Clicking on the dot will change the slide.
+
 ---
 
 #### Pixel perfect version of the CSS challenge
