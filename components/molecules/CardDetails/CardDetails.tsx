@@ -5,9 +5,7 @@ export const CardDetails = (props: CardDetailsProps) => {
   const { expiryDate, cvv = "", className } = props;
 
   return (
-    <div
-      className={`flex items-center gap-9 font-semibold text-white ${className}`}
-    >
+    <div className={`flex items-center gap-9 font-semibold  ${className}`}>
       {expiryDate && (
         <p className="text-[13px]">
           <span>Thru: </span>

@@ -218,7 +218,7 @@ export const AddNewCard = (props: AddNewCardProps) => {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="mt-4 py-[10px] gap-2 px-[12px] bg-secondary text-white text-[13px] font-semibold"
+            className="mt-4 disabled:bg-slate-400 disabled:opacity-60 py-[10px] gap-2 px-[12px] bg-secondary text-white text-[13px] font-semibold"
           >
             <Image
               src="/images/box.svg"

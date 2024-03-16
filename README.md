@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aspire App
 
-## Getting Started
+#### Use of TypeScript, with appropriate types/interfaces
 
-First, run the development server:
+Typescript has been used and all the component props and data types has been appropriately typed.
+
+---
+
+#### Use of a modern JS framework/libraries (Vue.js/React/Angular/Svelte/Alpine etc.)
+
+Next.js with app router
+Mix of RSC(Server components) and Client components
+
+---
+
+#### Desktop resolution CSS challenge
+
+Desktop mockup has been completed.
+Desktop mockup has been made responsive (Mobile mockup has been skipped)
+
+---
+
+#### Pixel perfect version of the CSS challenge
+
+All dimensions are matched with the dimensions available in the mockup. Images are also used from the mockup and their dimensions are exact.
+
+---
+
+#### Code optimized for high performance
+
+Used server + client model to ensure better performance and avoid unnecessary rerendering.
+
+---
+
+#### Simple and consistent code style, following best practices
+
+Best practices have been followed
+
+- Using appropriate type annotations for functions and components
+- Using hooks and util functions to read/mutate data
+- Using Form-Validation to avoid garbage values
+- Using components for better re-usability
+- Some minor quality of life improvements
+  - Avoid layout shift when toggling text/card number visibility
+  - Fully accessible with keyboard
+  - Modals can be dismissed with ESC key etc.
+
+---
+
+#### GitHub/Bitbucket/GitLab repository url
+
+https://github.com/Deevoid/aspire
+
+---
+
+#### Hosted version of the code challenge url (ex. Netlify/Vercel)
+
+---
+
+#### How to run this app.
+
+Run below commands after cloning the repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  npm install && npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+App will be availabe at localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Framework:** Next.js ⚡️
 
-## Learn More
+**Tools and libraries:** Tailwind CSS, Typescript, React-hook-form, Immer, Zustand
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Hosted on Vercel**

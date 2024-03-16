@@ -49,7 +49,7 @@ export const Card = (props: SingleCardType) => {
           visibility={isCardNumberVisible ? "visible" : "partial"}
         />
         <Spacer size={13.6} />
-        <CardDetails expiryDate={expiryDate} cvv={cvv} />
+        <CardDetails className="text-white" expiryDate={expiryDate} cvv={cvv} />
         <Spacer size={4.6} />
         <div className="flex justify-end">
           <Image
