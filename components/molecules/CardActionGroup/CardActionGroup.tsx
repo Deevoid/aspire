@@ -47,7 +47,7 @@ export const CardActionGroup = () => {
               height={32}
               width={32}
             />
-            <span className="max-w-16 text-[13px]  text-primary font-light">
+            <span className="max-w-16 text-[13px]  text-textPrimary font-light">
               {getActionLabel(action)}
             </span>
           </button>

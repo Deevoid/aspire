@@ -22,12 +22,12 @@ export const CardAccordions = () => {
               width={24}
               alt="card-details-icon"
             />
-            <span className="text-sm text-primary">Card details</span>
+            <span className="text-sm text-textPrimary">Card details</span>
           </div>
         }
       >
         <CardDetails
-          className="text-slate-800"
+          className="text-textPrimary"
           cvv={currentCard!?.cvv}
           expiryDate={currentCard!?.expiryDate}
         />
@@ -41,7 +41,9 @@ export const CardAccordions = () => {
               width={24}
               alt="card-details-icon"
             />
-            <span className="text-sm text-primary">Recent transactions</span>
+            <span className="text-sm text-textPrimary">
+              Recent transactions
+            </span>
           </div>
         }
         footer={
@@ -58,7 +60,7 @@ export const CardAccordions = () => {
               className="flex gap-3 first:pt-0 pt-4 last:pb-0 pb-4 last:border-none border-b border-[#fafafa]"
             >
               <div
-                className="w-12 h-12 rounded-full grid place-items-center"
+                className="flex-shrink-0 w-12 h-12 rounded-full grid place-items-center"
                 style={{
                   background: transactionCategoryColorMap[transaction.category],
                 }}
@@ -74,7 +76,7 @@ export const CardAccordions = () => {
                   alt="transaction-icon"
                 />
               </div>
-              <div>
+              <div className="">
                 <p className="text-sm text-textBaseColor font-medium mb-1">
                   {transaction.merchantName}
                 </p>
@@ -95,7 +97,7 @@ export const CardAccordions = () => {
                   </p>
                 </div>
               </div>
-              <div className="ml-auto flex self-start items-center gap-[10.5px]">
+              <div className="flex-shrink-0 ml-auto flex self-start items-center gap-[10.5px]">
                 <p
                   className={`text-base font-semibold ${
                     transaction.type === "credit"

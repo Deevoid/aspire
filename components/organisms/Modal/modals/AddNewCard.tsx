@@ -6,7 +6,11 @@ import { Modal } from "@/components/organisms/Modal";
 import { AddNewCardProps } from "@/components/organisms/Modal/modals/types";
 import { SingleCardType, defaultTransactions } from "@/constants/cards";
 import { addNewCard } from "@/hooks/useCardsData";
-import { sleep } from "@/utils";
+import {
+  generateRandomCardNumber,
+  generateRandomExpiryDate,
+  sleep,
+} from "@/utils";
 import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -17,9 +21,9 @@ export const AddNewCard = (props: AddNewCardProps) => {
   const methods = useForm({
     defaultValues: {
       cardName: "",
-      cardNumber: "",
-      expiryDate: "",
-      cvv: "",
+      cardNumber: generateRandomCardNumber(),
+      expiryDate: generateRandomExpiryDate(),
+      // cvv: "",
     },
   });
 
@@ -32,10 +36,10 @@ export const AddNewCard = (props: AddNewCardProps) => {
   } = methods;
 
   const cardData: SingleCardType = {
-    cardNumber: watch("cardNumber") || "0000000000000000",
+    cardNumber: watch("cardNumber"),
     name: watch("cardName") || "Peter Parker",
-    cvv: watch("cvv") || "000",
-    expiryDate: watch("expiryDate") || "12/12",
+    cvv: "000",
+    expiryDate: watch("expiryDate"),
     id: "demo-card",
     cardState: "active",
     cardType: "visa",
@@ -63,7 +67,7 @@ export const AddNewCard = (props: AddNewCardProps) => {
       closeHandler={() => setIsOpen(false)}
       title="Add new card"
     >
-      <div className="flex gap-8 flex-wrap items-center">
+      <div className="flex mt-4 gap-8 flex-wrap items-center">
         <form
           className="flex-1 flex flex-col gap-5"
           onSubmit={handleSubmit(onSubmit)}
@@ -101,7 +105,7 @@ export const AddNewCard = (props: AddNewCardProps) => {
           </label>
 
           {/* number */}
-          <label className="relative w-full flex flex-col">
+          {/* <label className="relative w-full flex flex-col">
             <span className="font-medium mb-1 text-sm">Card number</span>
             <input
               className="rounded-md peer pl-12 pr-2 py-2 border border-gray-200 placeholder-gray-300"
@@ -134,10 +138,10 @@ export const AddNewCard = (props: AddNewCardProps) => {
             <p className="absolute -bottom-4 text-xs text-red-600">
               {errors?.cardNumber?.message}
             </p>
-          </label>
+          </label> */}
 
           {/* date */}
-          <label className="relative w-full flex flex-col">
+          {/* <label className="relative w-full flex flex-col">
             <span className="font-medium mb-1 text-sm">Expiry Date</span>
             <input
               className="rounded-md peer pl-12 pr-2 py-2 border border-gray-200 placeholder-gray-300"
@@ -171,10 +175,10 @@ export const AddNewCard = (props: AddNewCardProps) => {
             <p className="absolute -bottom-4 text-xs text-red-600">
               {errors?.expiryDate?.message}
             </p>
-          </label>
+          </label> */}
 
           {/* cvv */}
-          <label className="relative w-full flex flex-col">
+          {/* <label className="relative w-full flex flex-col">
             <span className="font-medium mb-1 text-sm tracking-widest">
               CVV
             </span>
@@ -209,7 +213,7 @@ export const AddNewCard = (props: AddNewCardProps) => {
             <p className="absolute -bottom-4 text-xs text-red-600">
               {errors?.cvv?.message}
             </p>
-          </label>
+          </label> */}
 
           <Button
             type="submit"

@@ -26,7 +26,7 @@ export const CardDashboardBody = () => {
         currentCard: activeCard,
       }}
     >
-      <div className="box-shadow flex flex-col lg:flex-row flex-wrap gap-x-[46px] gap-y-[46px] rounded-lg p-10 border border-[#FCFCFC] pt-[60px] pb-10 px-10">
+      <div className="box-shadow flex flex-col items-center lg:items-start lg:flex-row gap-x-[46px] gap-y-[46px] rounded-lg  border border-[#FCFCFC] p-2 pt-10 md:pt-[60px] md:pb-10 md:px-10">
         <div className="flex-1">
           <CardCarousel
             activeIndex={activeCardIndex}

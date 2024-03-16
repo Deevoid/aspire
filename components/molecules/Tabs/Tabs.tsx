@@ -11,7 +11,7 @@ export const Tabs = (props: TabsProps) => {
           <button
             key={tab.id}
             className={`relative text-sm font-light text-textBaseColor ${
-              tab.id === activeTab ? "font-semibold" : ""
+              tab.id === activeTab ? "font-semibold" : "opacity-30"
             }`}
           >
             {tab.label}

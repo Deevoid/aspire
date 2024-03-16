@@ -41,8 +41,8 @@ export const Modal = (props: ModalProps) => {
       <div className="absolute overlay top-0 left-0 h-full w-full  filter backdrop-blur-xl bg-transparent"></div>
       <div className="relative bg-white p-10 rounded-lg shadow-xl max-w-full w-[800px] border border-slate-200">
         <div className="flex flex-col bg-white">
-          <div className="flex items-center justify-between">
-            <p className="text-xl font-semibold text-primary">{title}</p>
+          <div className="flex items-center justify-between border-b pb-4 border-gray-100">
+            <p className="text-xl font-semibold text-textPrimary">{title}</p>
             <button onClick={closeHandler}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

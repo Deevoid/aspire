@@ -8,7 +8,7 @@ import React from "react";
 export const CardsDashboard = () => {
   return (
     <main className="overflow-auto flex-1">
-      <div className="w-full max-w-[1026px] p-[60px] mx-auto flex-1 ">
+      <div className="w-full max-w-[1026px] p-4 md:p-[60px] mx-auto flex-1 ">
         <CardsDashboardHeader />
         <Spacer size={36} />
         <Tabs tabs={CardDashboardTabs} activeTab="my-cards" />

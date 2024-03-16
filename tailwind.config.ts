@@ -11,7 +11,7 @@ const config: Config = {
       sm: "480px",
       md: "768px",
       lg: "976px",
-      xl: "1024px",
+      xl: "1280px",
       xxl: "1336px",
     },
     extend: {
@@ -34,6 +34,8 @@ const config: Config = {
       },
       textColor: {
         textBaseColor: "#222222",
+        textAccent: "#01D167",
+        textPrimary: "#0C365A",
       },
     },
   },

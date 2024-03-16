@@ -6,7 +6,7 @@ export const Sidebar = () => {
   // this would come from the router or some other state manager in a real app
   const activeNavItem = "cards";
   return (
-    <aside className="flex-grow-0 flex-shrink-0 w-[340px] bg-primary py-[48px] pl-[48px] pr-[55px] flex flex-col">
+    <aside className="hidden xl:flex flex-grow-0 flex-shrink-0 w-[340px] bg-primary py-[48px] pl-[48px] pr-[55px] flex-col">
       <div className="mb-[81px]">
         <Image src="/images/logo.svg" alt="Aspire" width={125} height={35} />
         <p className="mt-[19px] text-white opacity-30 text-15 font-light">
@@ -30,7 +30,7 @@ export const Sidebar = () => {
               <p
                 className={`ml-[16px] text-white text-base font-light ${
                   activeNavItem === navItem.id
-                    ? "font-semibold text-accent"
+                    ? "font-semibold text-textAccent"
                     : ""
                 }`}
               >
