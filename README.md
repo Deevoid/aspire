@@ -55,6 +55,8 @@ https://github.com/Deevoid/aspire
 
 #### Hosted version of the code challenge url (ex. Netlify/Vercel)
 
+https://aspire-inky.vercel.app/
+
 ---
 
 #### How to run this app.

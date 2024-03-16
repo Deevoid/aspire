@@ -8,7 +8,7 @@ export const Sidebar = () => {
   return (
     <aside className="hidden xl:flex flex-grow-0 flex-shrink-0 w-[340px] bg-primary py-[48px] pl-[48px] pr-[55px] flex-col">
       <div className="mb-[81px]">
-        <Image src="/images/logo.svg" alt="Aspire" width={125} height={35} />
+        <Image src="/images/Logo.svg" alt="Aspire" width={125} height={35} />
         <p className="mt-[19px] text-white opacity-30 text-15 font-light">
           Trusted way of banking for 3,000+ SMEs and startups in Singapore
         </p>
