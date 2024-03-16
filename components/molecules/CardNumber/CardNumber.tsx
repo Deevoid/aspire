@@ -6,7 +6,7 @@ export const CardNumber = (props: CardNumberProps) => {
   const { cardNumber, className, visibility = "partial" } = props;
 
   const choppedCardNumbers = getChoppedNumbersArray(
-    cardNumber.replaceAll(" ", "").split("")
+    cardNumber?.replaceAll(" ", "").split("")
   );
 
   const { hiddenNumbersArray, visibleNumbersArray } = useMemo(() => {

@@ -8,7 +8,7 @@ export const Button = (props: ButtonProps) => {
     <button
       onClick={onClick}
       type={type}
-      className={`flex items-center justify-center rounded ${className}`}
+      className={`flex items-center justify-center rounded  outline-tabBorder ${className}`}
       {...restButtonProps}
     >
       {children}

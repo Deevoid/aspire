@@ -8,7 +8,6 @@ export const CardActionGroup = () => {
   const { currentCard } = useCardContext();
 
   const actionHandler = (action: string) => {
-    console.log("🚀 ~ CardActionGroup ~ actionHandler ~ action", action);
     if (!action) return;
 
     switch (action) {
@@ -25,7 +24,9 @@ export const CardActionGroup = () => {
 
   const getActionLabel = (action: (typeof cardActions)[number]) => {
     if (action.id === "freeze") {
-      return currentCard?.cardState === "frozen" ? "Unfreeze card" : "Freeze card";
+      return currentCard?.cardState === "frozen"
+        ? "Unfreeze card"
+        : "Freeze card";
     }
 
     return action.label;

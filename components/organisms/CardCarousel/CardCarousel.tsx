@@ -6,10 +6,9 @@ import { CardCarouselProps } from "@/components/organisms/CardCarousel/types";
 import React from "react";
 
 export const CardCarousel = (props: CardCarouselProps) => {
-  const { cards, activeIndex = 0, onChange } = props;
+  const { cards, activeIndex = 0, setActiveIndex } = props;
 
-  const [visibleIndex, setVisibleIndex] = React.useState(activeIndex);
-  const currentCardData = cards?.[visibleIndex];
+  const currentCardData = cards?.[activeIndex];
 
   if (!currentCardData) {
     return null;
@@ -25,11 +24,10 @@ export const CardCarousel = (props: CardCarouselProps) => {
             <button
               key={index}
               className={`bg-accent rounded-lg  h-2 w-2 ${
-                index === visibleIndex ? "w-4" : "opacity-20"
+                index === activeIndex ? "w-4" : "opacity-20"
               }`}
               onClick={() => {
-                setVisibleIndex(index);
-                onChange?.(index);
+                setActiveIndex?.(index);
               }}
             />
           );

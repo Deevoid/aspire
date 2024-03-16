@@ -1,4 +1,5 @@
 export const getChoppedNumbersArray = (array: Array<any>, separator = 4) => {
+  if (!array?.length) return [];
   const hiddenNumbersArray = [];
   const length = array.length;
   for (let i = 0; i < length; i += separator) {
@@ -11,4 +12,10 @@ export const getChoppedNumbersArray = (array: Array<any>, separator = 4) => {
   }
 
   return hiddenNumbersArray;
+};
+
+export const sleep = (duration: number) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, duration);
+  });
 };

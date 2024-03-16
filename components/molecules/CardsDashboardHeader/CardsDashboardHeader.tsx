@@ -1,4 +1,7 @@
+"use client";
+
 import { Button } from "@/components/atoms/Button";
+import { AddNewCard } from "@/components/organisms/Modal/modals/AddNewCard";
 import Image from "next/image";
 import React from "react";
 
@@ -7,6 +10,8 @@ export const CardsDashboardHeader = () => {
   const totalBalance = 3000;
 
   const parsedBalance = new Intl.NumberFormat().format(totalBalance);
+
+  const [openCardModal, setOpenCardModal] = React.useState(false);
 
   return (
     <div className="flex justify-between">
@@ -24,7 +29,12 @@ export const CardsDashboardHeader = () => {
         </div>
       </div>
       <div className="mt-[29px]">
-        <Button className="py-[10px] gap-2 px-[12px] bg-secondary text-white text-[13px] font-semibold">
+        <Button
+          onClick={() => {
+            setOpenCardModal(true);
+          }}
+          className="py-[10px] gap-2 px-[12px] bg-secondary text-white text-[13px] font-semibold"
+        >
           <Image
             src="/images/box.svg"
             height={16}
@@ -34,6 +44,7 @@ export const CardsDashboardHeader = () => {
           <span className="leading-[18px]">New card</span>
         </Button>
       </div>
+      <AddNewCard isOpen={openCardModal} setIsOpen={setOpenCardModal} />
     </div>
   );
 };
