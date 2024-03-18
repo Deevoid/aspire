@@ -44,7 +44,7 @@ export const CardsDashboardHeader = () => {
           <span className="leading-[18px]">New card</span>
         </Button>
       </div>
-      <AddNewCard isOpen={openCardModal} setIsOpen={setOpenCardModal} />
+      {openCardModal && <AddNewCard isOpen setIsOpen={setOpenCardModal} />}
     </div>
   );
 };
